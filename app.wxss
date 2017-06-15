@@ -5,6 +5,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.btn {
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #c0ccda;
+  color: #1f2d3d;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  user-select: none;
+  padding: 12px 17px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #50bfff;
+  border-color: #50bfff;
+  transition: all .2s ease;
+}
