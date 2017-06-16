@@ -1,4 +1,11 @@
 <!--pages/add/add.wxml-->
 <view class="container">
-  123
+  <input type="text" placeholder="投票标题" placeholder-class="placeholder" class="max-input" />
+  <input type="text" placeholder="补充描述(选填)" placeholder-class="placeholder" class="max-input des-input" />
+  <view class="vote-list">
+    <view class="vote-item" wx:for="{{lists}}" wx:key="{{item.name}}">
+      <text class="item-control"><image src="/assets/reduce.png"></image></text>
+      <input value="{{item.name}}" placeholder="选项" placeholder-class="placeholder" class="max-input item-input"  />
+    </view>
+  </view>
 </view>

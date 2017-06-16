@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    type: 'dan'
+    type: 'dan',
+    id: null,
+    title: '',
+    des: '',
+    lists: [
+      {
+        name: '',
+      },
+      {
+        name: '',
+      }
+    ],
+    date: '',
+    time: ''
   },
 
   /**
@@ -19,7 +32,7 @@ Page({
       wx.setNavigationBarTitle({
         title: '创建单选投票'
       })
-    } else {
+    } else if (options.type === "duo") {
       wx.setNavigationBarTitle({
         title: '创建多选投票'
       })
