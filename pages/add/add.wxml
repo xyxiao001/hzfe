@@ -1,16 +1,18 @@
 <!--pages/add/add.wxml-->
 <view class="container">
-  <input type="text" placeholder="投票标题" placeholder-class="placeholder" class="max-input" />
-  <input type="text" placeholder="补充描述(选填)" placeholder-class="placeholder" class="max-input des-input" />
+  <input type="text" placeholder="投票标题" placeholder-class="placeholder" class="max-input" value="{{title}}" bindinput="updateTitle" />
+  <input type="text" placeholder="补充描述(选填)" placeholder-class="placeholder" class="max-input des-input" value="{{des}}" bindinput="updateDes" />
   <view class="vote-list">
     <view class="vote-item" wx:for="{{lists}}" wx:key="{{item.name}}">
       <view class="item-control">
-        <image src="https://raw.githubusercontent.com/xyxiao001/hzfe/master/assets/reduce.png"></image>
+        <image src="https://raw.githubusercontent.com/xyxiao001/hzfe/master/assets/reduce.png" data-index="{{index}}" bindtap="deleteVote"></image>
       </view>
-      <input value="{{item.name}}" placeholder="选项" placeholder-class="placeholder" class="max-input item-input"  />
+      <input value="{{item.name}}" placeholder="选项" placeholder-class="placeholder" data-index="{{index}}" class="max-input item-input"  bindinput="updateVote" />
     </view>
-    <view class="add-item">
+    <view class="add-item" bindtap="addVote">
       <image src="https://raw.githubusercontent.com/xyxiao001/hzfe/master/assets/add.png"></image>
+      <text>添加选项</text>
     </view>
   </view>
+  <button class="btn" bindtap="success">完成</button>
 </view>

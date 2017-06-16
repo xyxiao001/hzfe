@@ -1,0 +1,4 @@
+<!--pages/show/show.wxml-->
+<view class="container">
+投票页面
+</view>

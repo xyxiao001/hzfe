@@ -10,7 +10,7 @@ input {
 .max-input {
   width: 100%;
   font-size: 45rpx;
-  height: 80rpx;
+  height: 90rpx;
   border-bottom: 1px solid gainsboro;
   margin-bottom: 20px;
 }
@@ -28,7 +28,7 @@ input {
 }
 
 .item-control {
-  width: 50rpx;
+  width: 60rpx;
 }
 
 .item-control image {
@@ -40,5 +40,25 @@ input {
   
 .item-input {
   font-size: 30rpx;
-  width: calc(100% - 50rpx);
+  width: calc(100% - 60rpx);
+}
+
+.add-item{
+  display: flex;
+}
+
+.add-item image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 4px 10px 0 0;
+}
+
+.add-item text {
+  line-height: 55rpx;
+  font-size: 35rpx;
+  color: #50bfff;
+}
+
+.btn {
+  margin-top: 20px;
 }

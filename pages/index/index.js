@@ -25,6 +25,7 @@ Page({
   onLoad: function () {
     wx.showToast({
       icon: 'loading',
+      mask: true,
       title: '登录中..',
     })
     // 显示分享群
