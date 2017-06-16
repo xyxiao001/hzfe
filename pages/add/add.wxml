@@ -4,8 +4,13 @@
   <input type="text" placeholder="补充描述(选填)" placeholder-class="placeholder" class="max-input des-input" />
   <view class="vote-list">
     <view class="vote-item" wx:for="{{lists}}" wx:key="{{item.name}}">
-      <text class="item-control"><image src="/assets/reduce.png"></image></text>
+      <view class="item-control">
+        <image src="https://raw.githubusercontent.com/xyxiao001/hzfe/master/assets/reduce.png"></image>
+      </view>
       <input value="{{item.name}}" placeholder="选项" placeholder-class="placeholder" class="max-input item-input"  />
+    </view>
+    <view class="add-item">
+      <image src="https://raw.githubusercontent.com/xyxiao001/hzfe/master/assets/add.png"></image>
     </view>
   </view>
 </view>

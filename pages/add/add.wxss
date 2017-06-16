@@ -10,7 +10,7 @@ input {
 .max-input {
   width: 100%;
   font-size: 45rpx;
-  height: 75rpx;
+  height: 80rpx;
   border-bottom: 1px solid gainsboro;
   margin-bottom: 20px;
 }
@@ -28,10 +28,17 @@ input {
 }
 
 .item-control {
-  width: 10%;
+  width: 50rpx;
+}
+
+.item-control image {
+  display: block;
+  margin: 20rpx 10rpx 0 0;
+  width: 40rpx;
+  height: 40rpx;
 }
   
 .item-input {
   font-size: 30rpx;
-  width: 90%;
+  width: calc(100% - 50rpx);
 }
