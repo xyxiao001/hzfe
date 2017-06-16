@@ -13,9 +13,13 @@ Page({
     lists: [
       {
         name: '',
+        vote: 0,
+        voteList: []
       },
       {
         name: '',
+        vote: 0,
+        voteList: []
       }
     ],
     date: '',
@@ -50,7 +54,9 @@ Page({
   addVote () {
     var arr = this.data.lists.concat([
       {
-        name: ''
+        name: '',
+        vote: 0,
+        voteList: []
       }
     ])
     this.setData({
@@ -145,7 +151,7 @@ Page({
             })
             setTimeout(() => {
               wx.navigateTo({
-                url: '/pages/show/show?id=' + time
+                url: '/pages/show/show?id=' + time + '&type=' + that.data.type
               })
             }, 1000)
           }

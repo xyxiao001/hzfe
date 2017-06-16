@@ -5,14 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    type: '',
+    obj: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.showToast({
+      title: '数据读取中...',
+      type: 'loading',
+      mask: true
+    })
+    var that = this
+    var type = 'dan'
+    var id = 1497603728000
+    // 读取本地数据
+    wx.getStorage({
+      key: 'votes',
+      success: function(res) {
+        var data =  JSON.parse(res.data)
+        data[type].forEach((val, index) => {
+          if (val.id === id) {
+            that.setData({
+              obj: val,
+              type: type,
+            })
+            wx.showToast({
+              title: '数据读取成功',
+              type: 'success',
+              mask: true
+            })
+          }
+        })
+      },
+    })
   },
 
   /**
@@ -26,7 +54,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
   },
 
   /**

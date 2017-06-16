@@ -1,4 +1,18 @@
 <!--pages/show/show.wxml-->
 <view class="container">
-投票页面
+  <view class="show-info">
+    <view class="title">
+      <text>{{obj.title }}</text>
+    </view>
+    <view class="des">
+     <text>{{obj.des }}</text>
+     <text wx:if="{{type === 'dan'}}" class="type">[单选]</text>
+     <text wx:else class="type">[多选]</text>
+    </view>
+    <view class="vote-list">
+      <view class="vote-item" wx:for="{{obj.lists}}" wx:key="{{index}}">
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
 </view>

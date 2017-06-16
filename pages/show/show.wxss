@@ -1,1 +1,30 @@
 /* pages/show/show.wxss */
+.container {
+  margin: 0 5%;
+}
+
+.title {
+  font-size: 50rpx;
+  line-height: 80rpx;
+  margin-bottom: 15rpx;
+}
+
+.des {
+  margin-bottom: 15rpx;
+}
+
+.type {
+  font-size: 34rpx;
+  margin-left: 10rpx;
+  color: deepskyblue;
+}
+
+.vote-list {
+  margin-top: 40rpx;
+}
+
+.vote-item {
+  border: 1px solid #deedf8;
+  height: 80rpx;
+  margin-bottom: 40rpx;
+}
