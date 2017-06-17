@@ -10,8 +10,11 @@
      <text wx:else class="type">[多选]</text>
     </view>
     <view class="vote-list">
-      <view class="vote-item" wx:for="{{obj.lists}}" wx:key="{{index}}">
-        <text>{{item.name}}</text>
+      <view class="vote-item" wx:for="{{obj.lists}}" wx:key="{{index}}" data-index="{{index}}" bindtap="chooseVote">
+        <text class="vote-name" data-index="{{index}}">{{item.name}}</text>
+        <text class="vote-num" data-index="{{index}}">{{item.vote}}票</text>
+        <text class="vote-prop" data-index="{{index}}">{{ item.prop }}%</text>
+        <text class="vote-bg" style="{{'width:' + item.prop + '%'}}" data-index="{{index}}"></text>
       </view>
     </view>
   </view>
