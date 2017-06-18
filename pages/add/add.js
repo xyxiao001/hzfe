@@ -107,17 +107,19 @@ Page({
       }
     })
 
-    // 开始储存数据
-    wx.showToast({
-      title: '数据保存中..',
-      type: 'loading',
-      mask: true,
-      duration: 15000
-    })
+    if (show) {
+      // 开始储存数据
+      wx.showToast({
+        title: '数据保存中..',
+        type: 'loading',
+        mask: true,
+        duration: 15000
+      })
 
-    //如果是新增， 那么直接添加
-    if (this.data.id === null) {
-      this.saveVote()
+      //如果是新增， 那么直接添加
+      if (this.data.id === null) {
+        this.saveVote()
+      }
     }
   },
 
@@ -150,7 +152,7 @@ Page({
               duration: 1500
             })
             setTimeout(() => {
-              wx.navigateTo({
+              wx.redirectTo({
                 url: '/pages/show/show?id=' + time + '&type=' + that.data.type
               })
             }, 1000)

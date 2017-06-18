@@ -5,14 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    dan: [],
+    duo: []
+  },
+  // 预览
+  preview (e) {
+    var id = e.target.dataset.id
+    var type = e.target.dataset.type
+    wx.navigateTo({
+      url: '/pages/show/show?id=' + id + '&type=' + type
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
   },
 
   /**
@@ -26,7 +34,32 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var that = this
+    wx.showToast({
+      title: '数据读取中...',
+      icon: 'loading',
+      mask: true,
+      duration: 5000
+    })
+
+    wx.getStorage({
+      key: 'votes',
+      success: function (res) {
+        var data = JSON.parse(res.data)
+        that.setData({
+          dan: data.dan,
+          duo: data.duo
+        })
+        wx.showToast({
+          title: '数据读取成功',
+        })
+      },
+      fail: function (res) {
+        wx.showToast({
+          title: '还没有数据哟！',
+        })
+      }
+    })
   },
 
   /**
