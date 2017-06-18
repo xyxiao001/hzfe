@@ -48,6 +48,7 @@ Page({
             if (choose2) {
               val.vote -= 1
               val.voteList.splice(del2, 1)
+              choose2 = false
             }
           }
         })
