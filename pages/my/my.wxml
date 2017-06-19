@@ -4,7 +4,7 @@
     <text class="title">单选:</text>
     <view class="lists">
       <view class="item" wx:for="{{dan}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-type="dan" bindtap="preview">
-        <text>{{ item.title }}</text>
+        <text data-id="{{item.id}}" data-type="dan">{{ item.title }}</text>
       </view>
     </view>
   </view>
@@ -12,7 +12,7 @@
     <text class="title">多选:</text>
     <view class="lists">
       <view class="item" wx:for="{{duo}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-type="duo" bindtap="preview">
-        <text>{{ item.title }}</text>
+        <text data-id="{{item.id}}" data-type="duo">{{ item.title }}</text>
       </view>
     </view>
   </view>
