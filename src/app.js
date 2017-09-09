@@ -27,7 +27,7 @@ App({
       console.log(e)
     }
   },
-  getUserInfo (cb) {
+  async getUserInfo (cb) {
     let login, key, user, dolog
     if (this.globalData.userInfo && typeof cb == "function") {
       cb(this.globalData.userInfo)
