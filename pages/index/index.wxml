@@ -1,9 +1,0 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="item">
-    <navigator url="/pages/add/add?type=dan" hover-class="none"><text class="btn">单选投票</text></navigator>
-  </view>
-  <view class="item">
-    <navigator url="/pages/add/add?type=duo" hover-class="none"><text class="btn">多选投票</text></navigator>
-  </view>
-</view>
