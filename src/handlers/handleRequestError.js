@@ -16,7 +16,7 @@ export default err => {
         showCancel: false,
         confirmColor: '#ff0000'
       }).then(() => {
-        App.Login();
+        App.getUserInfo();
         wx.showLoading({ title: "重新登录中" })
       })
       break;
